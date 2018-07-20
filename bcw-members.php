@@ -22,15 +22,21 @@ define( 'BCW_MEMBERS_DASHICON', 'dashicons-groups' );
  */
 require plugin_dir_path( __FILE__ ) . '/inc/post-type.php';
 require plugin_dir_path( __FILE__ ) . '/inc/post-fields.php';
+require plugin_dir_path( __FILE__ ) . '/inc/shortcode.php';
 require plugin_dir_path( __FILE__ ) . '/inc/admin.php';
 
 /**
- * Hooks: Actions & Filters
+ * Hooks: Actions, Filters
  */
 add_action( 'init', 'bcw_members_post_type' );
 add_action( 'cmb2_admin_init', 'bcw_members_post_fields' );
 add_filter( 'single_template', 'bcw_members_single' );
 add_filter( 'archive_template', 'bcw_members_archive' );
+
+/**
+ * Shortcode
+ */
+add_shortcode( 'bcw_members', 'bcw_members_shortcode' );
 
 /**
  * CMB2 Get the bootstrap
