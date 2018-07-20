@@ -11,7 +11,7 @@ function bcw_members_shortcode() {
 		'posts_per_page' => 5,
 	) );
 
-	$output = '<ul>';
+	$output = '<ul class="bcw-members-list">';
 
 	if ( $bcw_members_posts ) {
 
@@ -22,7 +22,7 @@ function bcw_members_shortcode() {
 			$bcw_member_img         = $bcw_member_meta["_bcw_members_img"][0];
 			$bcw_member_description = $bcw_member_meta["_bcw_members_description"][0];
 
-			$output .= '<li>';
+			$output .= '<li class="bcw-members-list__item">';
 			$output .= '<h2>' . $post->post_title . '</h2>'; // name
 			$output .= '<h3>' . $bcw_member_title . '</h3>'; // title
 			$output .= '<img src="' . $bcw_member_img . '"/>';

@@ -23,6 +23,7 @@ define( 'BCW_MEMBERS_DASHICON', 'dashicons-groups' );
 require plugin_dir_path( __FILE__ ) . '/inc/post-type.php';
 require plugin_dir_path( __FILE__ ) . '/inc/post-fields.php';
 require plugin_dir_path( __FILE__ ) . '/inc/shortcode.php';
+require plugin_dir_path( __FILE__ ) . '/inc/style.php';
 require plugin_dir_path( __FILE__ ) . '/inc/admin.php';
 
 /**
@@ -30,6 +31,7 @@ require plugin_dir_path( __FILE__ ) . '/inc/admin.php';
  */
 add_action( 'init', 'bcw_members_post_type' );
 add_action( 'cmb2_admin_init', 'bcw_members_post_fields' );
+add_action( 'wp_enqueue_scripts', 'bcw_members_style' );
 add_filter( 'single_template', 'bcw_members_single' );
 add_filter( 'archive_template', 'bcw_members_archive' );
 

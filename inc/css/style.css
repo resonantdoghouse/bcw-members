@@ -1,0 +1,10 @@
+.bcw-members-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.bcw-members-list__item {
+    flex: 1 1 25%;
+}
