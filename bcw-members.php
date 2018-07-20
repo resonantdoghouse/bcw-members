@@ -2,7 +2,7 @@
 
 /**
  * Plugin Name: BCW Members
- * Description: Custom post type of cats for using wp-json with google maps
+ * Description: Members post-type with CMB2 custom fields
  * Text Domain: bcw-members
  */
 

@@ -1,6 +1,6 @@
 # BCW Members 
 
-A simple WordPress plugin which adds a members content type.
+A simple WordPress plugin which adds a members post-type & CMB2 custom fields.
 
 ## Install
 Run `composer install`
