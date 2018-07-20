@@ -11,7 +11,8 @@ function bcw_members_shortcode() {
 		'posts_per_page' => 5,
 	) );
 
-	$output = '<ul class="bcw-members-list">';
+	$output = '<h1 class="bcw-members-title">Our Team</h1>';
+	$output .= '<ul class="bcw-members-list">';
 
 	if ( $bcw_members_posts ) {
 
