@@ -11,11 +11,14 @@ if ( ! function_exists( 'add_action' ) ) {
 	exit();
 }
 
-define( 'BCW_MEMBERS_POST_TYPE', 'bcw-members' );
+/**
+ * Define Constants for post-type & dashicon
+ */
+define( 'BCW_MEMBERS_POST_TYPE', 'bcw_members' );
 define( 'BCW_MEMBERS_DASHICON', 'dashicons-groups' );
 
 /**
- * Includes
+ * Includes: post-type, CMB2 fields, admin remove default editor
  */
 require plugin_dir_path( __FILE__ ) . '/inc/post-type.php';
 require plugin_dir_path( __FILE__ ) . '/inc/post-fields.php';
@@ -35,8 +38,6 @@ add_filter( 'archive_template', 'bcw_members_archive' );
 if ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 	require __DIR__ . '/vendor/autoload.php';
 }
-
-
 
 function bcw_members_single( $single_template ) {
 	global $post;

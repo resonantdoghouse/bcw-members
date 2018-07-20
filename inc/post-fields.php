@@ -3,7 +3,7 @@
 function bcw_members_post_fields() {
 
 	// Start with an underscore to hide fields from custom fields list
-	$prefix = '_bcw_members_';
+	$prefix = '_' . BCW_MEMBERS_POST_TYPE . '_';
 
 	/**
 	 * Initiate the metabox
@@ -21,19 +21,19 @@ function bcw_members_post_fields() {
 	$cmb->add_field( array(
 		'name'       => __( 'Title', 'cmb2' ),
 		'desc'       => __( 'Member title', 'cmb2' ),
-		'id'         => $prefix . 'text',
+		'id'         => $prefix . 'title',
 		'type'       => 'text',
 		'attributes' => array(
-			'placeholder' => 'A small amount of text',
+			'placeholder' => 'Member Title',
 			'required'    => 'required',
 		),
 	) );
 
 	// Member Image
 	$cmb->add_field( array(
-		'name'         => 'Member Image',
+		'name'         => 'Image',
 		'desc'         => 'Upload an image or enter an URL.',
-		'id'           => 'bcw_members_img',
+		'id'           => $prefix . 'img',
 		'type'         => 'file',
 		'options'      => array(
 			'url' => false, // Hide the text input for the url
@@ -49,20 +49,18 @@ function bcw_members_post_fields() {
 				'image/png',
 			),
 		),
-		'preview_size' => 'large',
+		'preview_size' => array( 100, 100 ),
 	) );
 
 	// description
 	$cmb->add_field( array(
-		'name'       => 'Team Member Description',
+		'name'       => 'Member Description',
 		'desc'       => 'Member description',
-		'id'         => 'bcw_members_description',
+		'id'         => $prefix . 'description',
 		'type'       => 'textarea',
 		'attributes' => array(
 			'placeholder' => 'Member description',
 			'required'    => 'required',
 		),
 	) );
-
-
 }
