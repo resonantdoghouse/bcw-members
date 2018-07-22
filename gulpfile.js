@@ -12,7 +12,7 @@ const browserSync = require('browser-sync');
 
 gulp.task('sass', function() {
   return gulp
-    .src('.inc/sass/style.scss', { sourcemaps: true })
+    .src('./inc/sass/style.scss', { sourcemaps: true })
     .pipe(prettyError())
     .pipe(sass())
     .pipe(
@@ -56,8 +56,8 @@ gulp.task('browser-sync', function() {
   const files = [
     './build/css/*.css',
     // './build/js/*.js',
-    './*.php',
-    './**/*.php'
+    // './*.php',
+    // './**/*.php'
   ];
 
   browserSync.init(files, {
@@ -69,7 +69,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', function() {
   // gulp.watch('inc/js/*.js', gulp.series('scripts'));
-  gulp.watch('inc/sass/*.scss', gulp.series('sass'));
+  gulp.watch('./inc/sass/*.scss', gulp.series('sass'));
 });
 
 gulp.task('default', gulp.parallel('browser-sync', 'watch'));
