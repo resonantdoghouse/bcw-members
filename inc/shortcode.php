@@ -30,7 +30,7 @@ function bcw_members_shortcode()
 
             $output .= '<li class="bcw-members-list__item">';
             $output .= '<div class="bcw-members-list__item-text-wrapper">';
-            $output .= '<h2>';
+            $output .= '<h2 class="bcw-members-list__item-title">';
             if ($show_permalink) {
                 $output .= '<a href="' . $bcw_member_permalink . '">' . $post->post_title . '</a>';
             } else {
@@ -38,10 +38,10 @@ function bcw_members_shortcode()
             }
 
             $output .= '</h2>';
-            $output .= '<h3>' . $bcw_member_title . '</h3>';
-            $output .= '<p>' . $bcw_member_description . '</p>';
+            $output .= '<h3 class="bcw-members-list__item-sub-title">' . $bcw_member_title . '</h3>';
+            $output .= '<p class="bcw-members-list__item-description">' . $bcw_member_description . '</p>';
             $output .= '</div>';
-            $output .= '<img class="bcw-members-avatar" src="' . $bcw_member_img . '"/>';
+            $output .= '<img class="bcw-members-list__item-avatar" src="' . $bcw_member_img . '"/>';
             $output .= '</li>';
 
         endforeach;

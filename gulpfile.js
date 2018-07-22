@@ -26,38 +26,9 @@ gulp.task('sass', function() {
     .pipe(gulp.dest('./build/css'));
 });
 
-// gulp.task('lint', function() {
-//   return gulp
-//     .src(['./js/*.js'])
-//     .pipe(prettyError())
-//     .pipe(eslint())
-//     .pipe(eslint.format())
-//     .pipe(eslint.failAfterError());
-// });
-
-// gulp.task(
-//   'scripts',
-//   gulp.series('lint', function() {
-//     return gulp
-//       .src('./js/*.js')
-//       .pipe(uglify())
-//       .pipe(
-//         rename({
-//           extname: '.min.js'
-//         })
-//       )
-//       .pipe(gulp.dest('./build/js'));
-//   })
-// );
-
-// Set-up BrowserSync and watch
-
 gulp.task('browser-sync', function() {
   const files = [
-    './build/css/*.css',
-    // './build/js/*.js',
-    // './*.php',
-    // './**/*.php'
+    './build/css/**/*.css',
   ];
 
   browserSync.init(files, {
@@ -69,7 +40,7 @@ gulp.task('browser-sync', function() {
 
 gulp.task('watch', function() {
   // gulp.watch('inc/js/*.js', gulp.series('scripts'));
-  gulp.watch('./inc/sass/*.scss', gulp.series('sass'));
+  gulp.watch('./inc/sass/**/*.scss', gulp.series('sass'));
 });
 
 gulp.task('default', gulp.parallel('browser-sync', 'watch'));
