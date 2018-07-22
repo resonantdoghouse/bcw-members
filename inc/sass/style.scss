@@ -15,7 +15,7 @@
   align-items: $align;
 }
 
-.bcw-members-list {
+.entry-content .bcw-members-list {
   padding: 0;
   display: flex;
   justify-content: center;
@@ -32,8 +32,7 @@
 
     }
     .bcw-members-avatar {
-
-      padding: 0.5rem;
+      padding: 0.625rem;
       width: 40%;
       border-radius: 100%;
       max-width: 100%;

@@ -2,7 +2,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-.bcw-members-list {
+.entry-content .bcw-members-list {
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -17,7 +17,7 @@
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap; }
-  .bcw-members-list__item {
+  .entry-content .bcw-members-list__item {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -33,7 +33,7 @@
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start; }
-    .bcw-members-list__item-text-wrapper {
+    .entry-content .bcw-members-list__item-text-wrapper {
       width: 60%;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -50,8 +50,8 @@
       -webkit-box-align: start;
           -ms-flex-align: start;
               align-items: flex-start; }
-    .bcw-members-list__item .bcw-members-avatar {
-      padding: 0.5rem;
+    .entry-content .bcw-members-list__item .bcw-members-avatar {
+      padding: 0.625rem;
       width: 40%;
       border-radius: 100%;
       max-width: 100%; }
