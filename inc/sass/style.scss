@@ -23,21 +23,19 @@
   flex-flow: row wrap;
 
   &__item {
-    width: 25%;
-    flex: 1 1 25%;
 
     @include flexed(row, nowrap);
 
     &-text-wrapper {
       width: 60%;
-      flex: 1 1 70%;
       @include flexed(column, nowrap);
 
     }
     .bcw-members-avatar {
-      flex: 1 1 30%;
-      border-radius: 50%;
-      width: 23%;
+
+      padding: 0.5rem;
+      width: 40%;
+      border-radius: 100%;
       max-width: 100%;
     }
   }
