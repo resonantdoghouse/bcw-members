@@ -23,8 +23,7 @@ function bcw_members_shortcode()
             $bcw_member_meta = get_post_meta($post->ID, '', true);
             $bcw_member_title = $bcw_member_meta["_bcw_members_title"][0];
             $bcw_member_permalink = get_the_permalink($post->ID);
-            $bcw_member_img = get_the_post_thumbnail_url($post->ID);
-            // $bcw_member_img = $bcw_member_meta["_bcw_members_img"][0];
+						$bcw_member_img = get_the_post_thumbnail_url($post->ID);
             $bcw_member_description = $bcw_member_meta["_bcw_members_description"][0];
 
             $output .= '<li class="bcw-members-list__item">';

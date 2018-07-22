@@ -29,29 +29,6 @@ function bcw_members_post_fields() {
 		),
 	) );
 
-	// Member Image
-	// $cmb->add_field( array(
-	// 	'name'         => 'Image',
-	// 	'desc'         => 'Upload an image or enter an URL.',
-	// 	'id'           => $prefix . 'img',
-	// 	'type'         => 'file',
-	// 	'options'      => array(
-	// 		'url' => false, // Hide the text input for the url
-	// 	),
-	// 	'text'         => array(
-	// 		'add_upload_file_text' => 'Choose Image'
-	// 	),
-	// 	'query_args'   => array(
-	// 		'type' => 'application/pdf',
-	// 		'type' => array(
-	// 			'image/gif',
-	// 			'image/jpeg',
-	// 			'image/png',
-	// 		),
-	// 	),
-	// 	'preview_size' => array( 100, 100 ),
-	// ) );
-
 	// description
 	$cmb->add_field( array(
 		'name'       => 'Member Description',

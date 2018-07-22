@@ -3,7 +3,7 @@
 /**
  * Add featured image size
  */
-add_image_size('bcw-members-avatar', 200, 200);
+add_image_size('bcw-members-avatar', 600, 600);
 
 /**
  * Change the Title field placeholder on the edit screen.
